@@ -88,4 +88,10 @@ return static function (RouteBuilder $routes) {
      * });
      * ```
      */
+    $routes->prefix('cms', function (RouteBuilder $builder) {
+        $routes = ['controller' => 'Staffs'];
+
+        $builder->connect('/', $routes + ['action' => 'index']);
+        $builder->fallbacks(DashedRoute::class);
+    });
 };
