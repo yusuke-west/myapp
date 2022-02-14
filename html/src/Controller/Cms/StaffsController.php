@@ -11,7 +11,7 @@ use App\Controller\AppController;
  * @property \App\Model\Table\StaffsTable $Staffs
  * @method \App\Model\Entity\Staff[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class StaffsController extends AppController
+class StaffsController extends AppCmsController
 {
     /**
      * Index method

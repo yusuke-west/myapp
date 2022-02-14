@@ -11,7 +11,7 @@ use App\Controller\AppController;
  * @property \App\Model\Table\ServicesTable $Services
  * @method \App\Model\Entity\Service[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class ServicesController extends AppController
+class ServicesController extends AppCmsController
 {
     /**
      * Index method

@@ -15,10 +15,12 @@ class UsersController extends AppController
 
     public function login()
     {
+        $viewBuilder = $this->viewBuilder();
         $result = $this->Authentication->getResult();
+        // $viewBuilder->setTemplate('Pages/login');
         // 認証成功
         if ($result->isValid()) {
-            $target = $this->Authentication->getLoginRedirect() ?? '/home';
+            $target = $this->Authentication->getLoginRedirect() ?? '/cms/tops';
             return $this->redirect($target);
         }
         // ログインできなかった場合

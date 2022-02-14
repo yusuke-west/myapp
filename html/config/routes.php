@@ -50,7 +50,7 @@ return static function (RouteBuilder $routes) {
          * its action called 'display', and we pass a param to select the view file
          * to use (in this case, templates/Pages/home.php)...
          */
-        $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+        $builder->connect('/', ['controller' => 'Pages', 'action' => 'display','home']);
 
         /*
          * ...and connect the rest of 'Pages' controller's URLs.
@@ -70,7 +70,8 @@ return static function (RouteBuilder $routes) {
          * You can remove these routes once you've connected the
          * routes you want in your application.
          */
-        $builder->fallbacks();
+        $builder->fallbacks(DashedRoute::class);
+        
     });
 
     /*
@@ -88,10 +89,15 @@ return static function (RouteBuilder $routes) {
      * });
      * ```
      */
+  
     $routes->prefix('cms', function (RouteBuilder $builder) {
-        $routes = ['controller' => 'Staffs'];
+        $builder->connect('/', ['controller' => 'Tops', 'action' => 'index']);
+        $builder->fallbacks('DashedRoute');
+    });
 
-        $builder->connect('/', $routes + ['action' => 'index']);
-        $builder->fallbacks(DashedRoute::class);
+    $routes->prefix('front', function (RouteBuilder $builder) {
+        $builder->connect('/', 
+        ['controller' => 'Reservations', 'action' => 'index']);
+        $builder->fallbacks('DashedRoute');
     });
 };

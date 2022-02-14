@@ -11,7 +11,7 @@ use App\Controller\AppController;
  * @property \App\Model\Table\ReservationsTable $Reservations
  * @method \App\Model\Entity\Reservation[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class ReservationsController extends AppController
+class ReservationsController extends AppCmsController
 {
     /**
      * Index method

@@ -146,9 +146,10 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
      // ↓追加
      public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
      {
+         $loginPath = Router::url(['controller'=>'Users','action'=>'login']);
          $service = new AuthenticationService();
          $service->setConfig([
-             'unauthenticatedRedirect' => Router::url('/users/login'),
+             'unauthenticatedRedirect' => $loginPath,
              'queryParam' => 'redirect',
          ]);
          $service->loadAuthenticator('Authentication.Session');

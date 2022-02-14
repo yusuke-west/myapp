@@ -17,6 +17,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Core\Configure;
+use Cake\Event\EventInterface;
 use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
 use Cake\Http\Response;
@@ -43,6 +44,11 @@ class PagesController extends AppController
      *   be found and not in debug mode.
      * @throws \Cake\View\Exception\MissingTemplateException In debug mode.
      */
+    public function beforeFilter(EventInterface $event)
+    {
+        $this->Authentication->allowUnauthenticated(['display']);
+    }
+    
     public function display(string ...$path): ?Response
     {
         if (!$path) {
