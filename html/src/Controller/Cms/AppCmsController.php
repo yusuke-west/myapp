@@ -16,6 +16,6 @@ class AppCmsController extends AppController
     public function beforeRender(EventInterface $event)
     {
         $viewBuilder = $this->viewBuilder();
-        $viewBuilder->setLayout('custom');
+        $viewBuilder->setLayout('cms');
     }
 }

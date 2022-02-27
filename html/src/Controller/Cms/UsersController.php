@@ -5,7 +5,7 @@ namespace App\Controller\Cms;
 
 use App\Controller\AppController;
 
-class UsersController extends AppController
+class UsersController extends AppCmsController
 {
     public function beforeFilter(\Cake\Event\EventInterface $event)
     {

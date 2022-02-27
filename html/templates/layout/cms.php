@@ -53,7 +53,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->fetch('content') ?>
         </div>
     </main>
-    <?= $this->element('sidebar') ?>
     <footer>
     </footer>
 </body>

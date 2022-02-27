@@ -18,6 +18,8 @@ namespace App\Controller\Front;
 
 use App\Controller\AppController;
 use Cake\Controller\Controller;
+use Cake\Event\EventInterface;
+
 
 /**
  * Application Controller
@@ -48,5 +50,11 @@ class AppFrontController extends AppController
          * see https://book.cakephp.org/4/en/controllers/components/form-protection.html
          */
         //$this->loadComponent('FormProtection');
+    }
+
+    public function beforeRender(EventInterface $event)
+    {
+        $viewBuilder = $this->viewBuilder();
+        $viewBuilder->setLayout('front');
     }
 }

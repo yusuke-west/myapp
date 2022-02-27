@@ -53,6 +53,9 @@
               <?= $this->Html->link('サービス管理',['controller'=>'services','action'=>'index']) ?>
               </li>
               <li class="nav-item">
+              <?= $this->Html->link('お客様管理',['controller'=>'members','action'=>'index']) ?>
+              </li>
+              <li class="nav-item">
               <?= $this->Html->link('ログアウト',['controller'=>'users','action'=>'logout']) ?>
               </li>
             </ul>

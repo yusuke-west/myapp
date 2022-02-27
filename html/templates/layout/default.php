@@ -34,8 +34,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
-    <?= $this->Html->css('/plugins/adminLTE/css/AdminLTE.css') ?>
-    <?= $this->Html->script('/plugins/adminLTE/js/adminlte.js') ?>
 </head>
 <body>
     <nav class="top-nav">
