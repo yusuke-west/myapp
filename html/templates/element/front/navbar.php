@@ -1,19 +1,19 @@
 <nav id="menubar">
 	<ul>
 	<li class="menuimg menu1 current">
-		<?= $this->Html->link('Home','front/home') ?>
+		<a href="<?= $this->Url->build(['action'=>'index']) ?>"><span>Home</span></a>
 	</li>
 	<li class="menuimg menu2">
-		<?= $this->Html->link('Company','front/home/company') ?>
+		<a href="<?= $this->Url->build(['action'=>'company']) ?>"><span>Company</span></a>
 	</li>
 	<li class="menuimg menu3">
-        <?= $this->Html->link('Works','front/home/works') ?>
+		<a href="<?= $this->Url->build(['action'=>'works']) ?>"><span>Works</span></a>
 	</li>
 	<li class="menuimg menu4">
-        <?= $this->Html->link('Link','front/home/link') ?>
+		<a href="<?= $this->Url->build(['action'=>'link']) ?>"><span>Link</span></a>
 	</li>
 	<li class="menuimg menu5">
-        <?= $this->Html->link('Contact','front/home/contact') ?>
+		<a href="<?= $this->Url->build(['action'=>'contact']) ?>"><span>Contact</span></a>
 	</li>
 	</ul>
 </nav>

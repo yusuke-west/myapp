@@ -1,7 +1,7 @@
 <header class="pc">
 
 	<h1 class="logo">
-        <a href="index.html">
+        <a href="<?= $this->Url->build(['action' => 'index']) ?>">
             <?= $this->Html->image('/plugins/template/tp_biz52_black/images/logo.png') ?>
         </a>
     </h1>
